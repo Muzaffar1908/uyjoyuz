@@ -1,0 +1,312 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+    background: var(--light-blue) !important;
+    font-family: var(--font-family);
+}
+html {
+    overflow-x: hidden;
+}
+
+.filter_all {
+    width: 100%;
+    height: 100vh;
+    padding-top: 10rem;
+}
+
+ 
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    z-index: 100;
+    border-radius: 2px;
+    font-size: 20px;
+
+    input {
+        background-color: transparent;
+    }
+    @media screen and (max-width:1115px) {
+       flex-wrap: nowrap;
+    }
+    @media screen and (max-width:950px) {
+        flex-wrap: wrap;
+     }
+
+    @media screen and (max-width:600px) {
+        width: 95%;
+        font-size: 15px;
+    }
+    i {
+        margin: .5rem;
+        font-size: 20px;
+    }
+    .search-1 {
+        padding: .5rem 1rem;
+        width: 48.85%;
+        border-right: 1.5px solid rgb(201, 191, 191);
+        height: 100%;
+        margin-right: 10px;
+        background-color: #fff;
+
+        @media screen and (max-width:950px) {
+            width: 100%;
+            border-right: none;
+            margin: 0;
+            border-bottom: 1px solid gray;
+        }
+    }
+    .location {
+        padding: .5rem 1rem;
+        width: 35%;
+        background-color: #fff;
+        border-right: 1.5px solid rgb(201, 191, 191);
+        @media screen and (max-width:950px) {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid gray;
+        }
+    }
+    .search {
+        float: right;
+        padding: .5rem 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15%;
+        transition: .5s ease all;
+        cursor: pointer;
+        background-color: #fff;
+        @media screen and (max-width:950px) {
+            width: 100%;
+            
+            border-bottom: 1px solid gray;
+        }
+        p {
+            color: #000;
+            font-size: 20px;
+            margin-top: .8rem;
+            margin-right: .3rem;
+
+            @media screen and (max-width:600px) {
+               font-size: 18px;
+            }
+        }
+    
+        &:hover {
+            background-color: rgb(51, 48, 48);
+            color: #fff;
+            p {
+                color: #fff;
+            }
+        }
+    }
+   
+    input {
+        width: 70%;
+        height: 90%;
+        border: none;
+        outline: none;
+    }
+}
+
+
+.reklama_blok {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+    width: 100%;
+    height: 10rem;
+    background-color: #fff;
+    p {
+        text-transform: uppercase;
+        font-size: 3rem;
+        word-spacing: 2rem;
+    }
+}
+
+.para {
+    font-size: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+.big_filter {
+    display: flex;
+    flex-wrap: wrap;
+}
+.filter-blok {
+    margin-right: 2rem;
+}
+ select {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    appearance:none;
+    outline:0;
+    box-shadow:none;
+    border:0!important;
+    background: #fff;
+    background-image: none;
+    flex: 1;
+    padding: 0 .5em;
+    color:#000;
+    cursor:pointer;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+ }
+ select::-ms-expand {
+    display: none;
+ }
+ .select {
+    position: relative;
+    display: flex;
+    width: 16em;
+    height: 3em;
+    line-height: 3;
+    background: #fff;
+    overflow: hidden;
+    border-radius: .25em;
+    color: #fff;
+ }
+ .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: var(--bacground-color);
+    cursor:pointer;
+    pointer-events:none;
+    transition:.25s all ease;
+ }
+ .select:hover::after {
+    color: #ff9;
+ }
+
+ @import url("https://fonts.googleapis.com/css?family=Lato");
+
+$background: #e74c3c;
+$select-color: #fff;
+$select-background: #c0392b;
+$select-width: 220px;
+$select-height: 40px; 
+
+body { 
+  font-family: Lato, Arial;
+  color: $select-color;
+  padding: 20px;
+  background-color: $background;
+}
+h1 {
+  font-weight: normal;
+  font-size: 40px;
+  font-weight: normal;
+  text-transform: uppercase;
+  span { 
+    font-size: 13px;
+    display: block;
+    padding-left: 4px;
+  }
+}
+p {
+  margin-top: 200px;
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: darken($select-background, 2);
+    &:hover {
+      background-color: darken($select-background, 5);
+    }
+  }
+}
+.select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+.select {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  color: $select-color;
+  width: $select-width;
+  height: $select-height;
+}
+.select-styled {
+  position: absolute; 
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $select-background;
+  padding: 8px 15px;
+  &:after {
+    content:"";
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-color: $select-color transparent transparent transparent;
+    position: absolute;
+    top: 16px;
+    right: 10px;
+  }
+  &:hover {
+    background-color: darken($select-background, 2);
+  }
+  &:active, &.active {
+    background-color: darken($select-background, 5);
+    &:after {
+      top: 9px;
+      border-color: transparent transparent $select-color transparent;
+    }
+  }
+}
+
+.select-options {
+  display: none; 
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: darken($select-background, 5);
+  li {
+    margin: 0;
+    padding: 12px 0;
+    text-indent: 15px;
+    border-top: 1px solid darken($select-background, 10);
+    &:hover, 
+    &.is-selected {
+      color: $select-background;
+      background: $select-color;
+    }
+    &[rel="hide"] {
+      display: none;
+    }
+  }
+}
+
+
+ 
+
+ 
+ 
+
+
